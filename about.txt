@@ -1,0 +1,5 @@
+Theme name:     Joe Innes's Theme
+Description:    A theme for my homepage
+Author name:    Joe Innes
+Author site:    http://joeinn.es
+License:        http://licence.visualidiot.com
