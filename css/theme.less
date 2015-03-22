@@ -253,7 +253,9 @@ a.to_nav {
 .article-text {
   p {
     &:first-of-type {
-      .bold;
+      :not(blockquote p) {
+        .bold;
+      }
     }
   }
   img {
