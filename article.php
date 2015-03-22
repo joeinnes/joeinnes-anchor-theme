@@ -1,15 +1,25 @@
 <?php theme_include('header'); ?>
-<div class="row">
+<div class="row header-img">
 	<?php if(article_custom_field('featured_image')): ?>
-		<div class="featured-img" style="background-image: url(<?php echo article_custom_field('featured-image', 'http://s13.postimg.org/w3p4tc5pz/article_img_default.jpg'); ?>);"></div>
+		<div class="featured-img" style="background-image: url(<?php echo article_custom_field('featured_image'); ?>);">
+			<div class="featured-overlay container">
+				<h1 class="article-header-headline"><?php echo article_title(); ?></h1>
+				<p class="article-header-description"><?php echo article_title(); ?></p>
+			</div>
+		</div>
 	<?php else: ?>
-		<div class="featured-img" style="background-image: url('https://ununsplash.imgix.net/photo-1423753623104-718aaace6772?dpr=2&fit=crop&fm=jpg&h=600&q=75&w=1050');"></div>
+		<div class="featured-img" style="background-image: url('<?php echo theme_url('/images/default.jpg') ?>');">
+		<div class="featured-overlay container">
+			<h1 class="article-header-headline"><?php echo article_title(); ?></h1>
+			<p class="article-header-description"><?php echo article_title(); ?></p>
+		</div>
+	</div>
 	<?php endif?>
 </div>
+<div class="separator u-full-width"></div>
 <div class="container">
 		<section class="content">
 			<article>
-		    	<h1><?php echo article_title(); ?></h1>
 		        <h5><?php echo article_date(); ?></h5>
 			    <?php echo article_markdown(); ?>
 			    <?php echo article_custom_field('attribution'); ?>

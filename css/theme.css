@@ -87,10 +87,11 @@ a.to_nav:focus {
 
 #primary_nav li a {
   display: block;
-  padding: 0 0.8rem;
+  padding: 0 0.3rem;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 1.1rem;
   border-bottom: 1px solid #383838;
   color: #6a6;
   transition: color 200ms;
@@ -133,7 +134,7 @@ a.to_nav:focus {
   #primary_nav li a {
     float: right;
     border: none;
-    padding: 0 1rem;
+    padding: 0 0.4rem;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
@@ -154,10 +155,18 @@ a.to_nav:focus {
 .featured-overlay {
   color: #fff;
   width: 100%;
-  text-align: center;
   position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.article-header-description {
+  color: #ddd;
+}
+
+.separator {
+  height: 3px;
+  background-color: #454545;
 }

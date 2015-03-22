@@ -5,6 +5,13 @@
 				<?php while(menu_items()) : ?>
 					<li><a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>"><?php echo menu_name(); ?></a></li>
 				<?php endwhile; ?>
+				<?php while(categories()): ?>
+					<li>
+						<a href="<?php echo category_url(); ?>" title="<?php echo category_title(); ?>">
+							<?php echo category_title(); ?>
+						</a>
+					</li>
+				<?php endwhile; ?>
 			</ul>
 		</nav>
 	<?php endif; ?>
