@@ -4,7 +4,7 @@
 		<div class="featured-img" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(<?php echo article_custom_field('featured_image'); ?>);">
 			<div class="featured-overlay container">
 				<h1 class="article-header-headline"><?php echo article_title(); ?></h1>
-				<p class="article-header-description"><?php echo article_description(); ?><br /><small><em>Read time: <?php echo dg_est_reading_time(); ?></em></small></p>
+				<p class="article-header-description"><?php echo article_description(); ?><br /><em>Read time: <?php echo dg_est_reading_time(); ?></em></p>
 			</div>
 		</div>
 	<?php else: ?>
