@@ -1,14 +1,14 @@
 <?php theme_include('header'); ?>
 <div class="row header-img">
 	<?php if(article_custom_field('featured_image')): ?>
-		<div class="featured-img" style="background-image: url(<?php echo article_custom_field('featured_image'); ?>);">
+		<div class="featured-img" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(<?php echo article_custom_field('featured_image'); ?>);">
 			<div class="featured-overlay container">
 				<h1 class="article-header-headline"><?php echo article_title(); ?></h1>
-				<p class="article-header-description"><?php echo article_title(); ?></p>
+				<p class="article-header-description"><?php echo article_description(); ?><br /><small><em>Read time: <?php echo dg_est_reading_time(); ?></em></small></p>
 			</div>
 		</div>
 	<?php else: ?>
-		<div class="featured-img" style="background-image: url('<?php echo theme_url('/images/default.jpg') ?>');">
+		<div class="featured-img" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<?php echo theme_url('/images/default.jpg') ?>');">
 		<div class="featured-overlay container">
 			<h1 class="article-header-headline"><?php echo article_title(); ?></h1>
 			<p class="article-header-description"><?php echo article_title(); ?></p>
@@ -21,8 +21,9 @@
 		<section class="content">
 			<article>
 		        <h5><?php echo article_date(); ?></h5>
-			    <?php echo article_markdown(); ?>
-			    <?php echo article_custom_field('attribution'); ?>
+						<div class="article-text">
+			    		<?php echo article_markdown(); ?>
+						</div>
 			</article>
 		</section>
 

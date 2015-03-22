@@ -15,7 +15,7 @@
   color: #454545;
 }
 
-header .row {
+header > .row {
   background-color: #454545;
   line-height: 5rem;
 }
@@ -36,7 +36,7 @@ header .row {
 }
 
 .logo a {
-  color: #DDD;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -148,8 +148,9 @@ a.to_nav:focus {
 /* Featured image styles */
 
 .featured-img {
-  height: 50vh;
-  background-size: cover;
+  height: 40vh;
+  background-size: cover !important;
+  /* !important required to override inline styling, not because I'm lazy */
 }
 
 .featured-overlay {
@@ -160,13 +161,49 @@ a.to_nav:focus {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  max-height: 100%;
+  overflow: hidden;
 }
 
 .article-header-description {
   color: #ddd;
+  width: 60%;
+  border-right: solid 1px;
+  border-color: #fff;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  font-size:0.8em;
 }
 
 .separator {
   height: 3px;
   background-color: #454545;
+  margin-bottom: 10px;
+}
+
+.article-text p:first-of-type {
+  font-weight: 700;
+}
+
+.article-text img {
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid;
+  border-color: #454545;
+}
+
+.captionjs figcaption {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  color: #fff;
+  text-align: center;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  font-style: italic;
+}
+
+.social-links a {
+  color: #fff;
 }

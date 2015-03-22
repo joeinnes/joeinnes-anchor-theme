@@ -11,6 +11,7 @@
   <link href="<?php echo theme_url('css/normalize.css'); ?>"  rel="stylesheet" media="screen" type="text/css" />
   <link href="<?php echo theme_url('css/skeleton.css'); ?>"  rel="stylesheet" media="screen" type="text/css" />
   <link href="<?php echo theme_url('css/theme.css'); ?>"  rel="stylesheet" media="screen" type="text/css" />
+  <link href="<?php echo theme_url('css/captionjs.min.css'); ?>"  rel="stylesheet" media="screen" type="text/css" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="shortcut icon" href="<?php echo theme_url('img/favicon.ico'); ?>" type="image/x-icon" />
 
