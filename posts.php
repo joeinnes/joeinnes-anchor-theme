@@ -20,7 +20,11 @@
 					<p><?php echo article_description(); ?></p>
 				</article>
 				<hr />
-			<?php endwhile; endif; ?>
+			<?php endwhile; ?>
+		<?php else: ?>
+		<h2>Sorry, no posts found</h2>
+		<p>Maybe you should try your search again with different keywords?</p>
+		<?php endif; ?>
 		</section>
 
 		<section class="pagination">
