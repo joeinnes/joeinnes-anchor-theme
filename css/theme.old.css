@@ -1,0 +1,187 @@
+@import "normalize.css";
+@import "skeleton.css";
+.primary-bg {
+  background-color: #66aa66;
+}
+.primary-txt {
+  color: #66aa66;
+}
+.secondary-bg {
+  background-color: #454545;
+  color: #ffffff;
+}
+.secondary-txt {
+  color: #454545;
+}
+body {
+  background-color: #454545;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+header > .row {
+  background-color: #454545;
+  line-height: 5rem;
+}
+.logo {
+  -webkit-transition: padding-left 200ms;
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-transform: uppercase;
+  transition: padding-left 200ms;
+}
+.logo:hover {
+  -webkit-transition: padding-left 300ms;
+  padding-left: 3rem;
+  transition: padding-left 300ms;
+}
+.logo a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.tagline {
+  -webkit-transition: color 300ms;
+  display: table-cell;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  transition: color 300ms;
+  vertical-align: middle;
+}
+.tagline:hover {
+  -webkit-transition: color 300ms;
+  color: #eeeeee;
+  transition: color 300ms;
+}
+a.to_nav {
+  background: #66aa66;
+  color: #ffffff;
+  display: table-cell;
+  font-size: 2.5rem;
+  margin-right: 0.8rem;
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  text-decoration: none;
+  vertical-align: middle;
+}
+a.to_nav:hover {
+  -webkit-transition: color 300ms, background-color 300ms;
+  background: #345d34;
+  color: #ffffff;
+  transition: color 300ms, background-color 300ms;
+}
+a.to_nav:focus {
+  -webkit-transition: color 300ms, background-color 300ms;
+  background: #345d34;
+  color: #ffffff;
+  transition: color 300ms, background-color 300ms;
+}
+#primary_nav {
+  position: absolute;
+  right: 1rem;
+  top: 0px;
+}
+#primary_nav ul {
+  background: #454545;
+  list-style: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+#primary_nav li {
+  display: inline;
+  line-height: 5rem;
+  margin-bottom: 0px;
+}
+#primary_nav li a {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -webkit-transition: color 200ms;
+  border-bottom: 1px solid #383838;
+  border-radius: 2px;
+  border: none;
+  color: #66aa66;
+  display: block;
+  float: right;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0 0.3rem;
+  padding: 0 0.4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 200ms;
+}
+#primary_nav li a:hover {
+  -webkit-transition: color 300ms, background-color 300ms;
+  background-color: #66aa66;
+  color: #ffffff;
+  transition: color 300ms, background-color 300ms;
+}
+#primary_nav li a:focus {
+  -webkit-transition: color 300ms, background-color 300ms;
+  background-color: #66aa66;
+  color: #ffffff;
+  transition: color 300ms, background-color 300ms;
+}
+#primary_nav li:last-child a {
+  border-bottom: none;
+}
+.wrapper {
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  a.to_nav {
+    display: none;
+  }
+}
+.featured-img {
+  background-size: cover !important;
+  height: 40vh;
+}
+.featured-overlay {
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  color: #ffffff;
+  max-height: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.article-header-description {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  border-color: #ffffff;
+  border-right: solid 1px;
+  color: #dddddd;
+  font-family: Georgia, serif;
+  font-size: 0.9em;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: 60%;
+}
+.separator {
+  background-color: #454545;
+  height: 3px;
+  margin-bottom: 10px;
+}
+.article-text p:first-of-type {
+  font-weight: 700;
+}
+.article-text img {
+  border-color: #454545;
+  border: 3px solid;
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+.captionjs figcaption {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  color: #ffffff;
+  font-family: Georgia, serif;
+  font-style: italic;
+  padding-bottom: 0.7em;
+  padding-top: 0.7em;
+  text-align: center;
+}
+.social-links a {
+  color: #ffffff;
+}

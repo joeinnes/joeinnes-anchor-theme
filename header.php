@@ -8,10 +8,7 @@
 
   <title><?php echo page_title(); ?> | <?php echo site_name(); ?></title>
 
-  <link href="<?php echo theme_url('css/normalize.css'); ?>"  rel="stylesheet" media="screen" type="text/css" />
-  <link href="<?php echo theme_url('css/skeleton.css'); ?>"  rel="stylesheet" media="screen" type="text/css" />
-  <link href="<?php echo theme_url('css/theme.css'); ?>"  rel="stylesheet" media="screen" type="text/css" />
-  <link href="<?php echo theme_url('css/captionjs.min.css'); ?>"  rel="stylesheet" media="screen" type="text/css" />
+  <link href="<?php echo theme_url('css/theme.min.css'); ?>"  rel="stylesheet" media="screen" type="text/css" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="<?php echo theme_url('img/favicon.ico'); ?>" type="image/x-icon" />
@@ -35,8 +32,8 @@
         <div class="logo primary-bg u-pull-left">
           <a href="<?php echo base_url(); ?>"><?php echo site_name(); ?></a>
         </div>
-        <div>
-          <span class="tagline primary-txt u-pull-left"><?php echo site_description(); ?></span>
+        <div class="u-pull-left tagline primary-txt">
+          <small><?php echo site_description(); ?></small>
         </div>
         <div class="u-pull-right nav-menu">
           <a class="to_nav" href="#primary_nav"><i class="fa fa-bars"></i></a>

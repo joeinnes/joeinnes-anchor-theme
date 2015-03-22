@@ -1,6 +1,6 @@
 </div>
 <?php if(has_menu_items()) : ?>
-	<nav role="main" class="nav-menu container" id="primary_nav">
+	<nav role="main" class="nav-menu" id="primary_nav">
 		<ul>
 			<?php while(menu_items()) : ?>
 				<li><a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>"><?php echo menu_name(); ?></a></li>
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 </footer>
-<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="<?php echo theme_url('js/jquery.min.js'); ?>"></script>
 <script src="<?php echo theme_url('js/jquery.caption.min.js'); ?>" type="text/javascript"></script>
 
 <script>

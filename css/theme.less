@@ -1,0 +1,274 @@
+@import "normalize.css";
+@import "skeleton.css";
+@import "captionjs.min.css";
+
+// Define variables
+@main-text: #454545;
+@main-bg: #ffffff;
+@secondary-text: @main-bg; // Appears 12 times
+@secondary-bg: @main-text; // Appears 7 times
+@mainbrand: #66aa66; // Appears 6 times
+@brand-dark: darken(@mainbrand, 15%); // Appears 2 times
+@primary-fonts: 'Source Sans Pro', sans-serif;
+// @primary-fonts: sans-serif;
+@secondary-fonts: Georgia, serif;
+@feature-header-height: 40vh;
+@logo-font-size: 2.5rem;
+@logo-line-height: 2*@logo-font-size;
+@menu-font-size: 1rem;
+@border-width: 3px;
+@slow-transition: 300ms;
+@fast-transition: 0.5*@slow-transition;
+@standard-padding: 0rem 1.5rem 0rem 1.5rem;
+@standard-padding-single: 1rem;
+
+// Set up a few key classes
+.primary-bg {
+  background-color: @mainbrand;
+}
+
+.primary-txt {
+  color: @mainbrand;
+}
+
+.secondary-bg {
+  background-color: @secondary-bg;
+  color: @secondary-text;
+}
+
+.secondary-txt {
+  color: @secondary-bg;
+}
+
+.border {
+  border-color: @secondary-bg;
+  border: @border-width solid;
+}
+
+a {
+  color: @mainbrand;
+}
+
+// Define a few standards
+
+body {
+  background-color: @secondary-bg;
+  font-family: @primary-fonts;
+}
+
+.wrapper {
+  background-color: @secondary-text;
+  position: relative;
+  width: 100%;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+.unstyled-link {
+  color: @secondary-text;
+  text-decoration: none;
+}
+
+.vertical-centre {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.bold {
+  font-weight: 700;
+}
+// Nav bar styles
+header .row {
+  background-color: @secondary-bg;
+  line-height: @logo-line-height;
+  height: @logo-line-height;
+}
+
+.logo {
+  .upper-case;
+  font-size: @logo-font-size;
+  padding: @standard-padding;
+  transition: padding-left @fast-transition;
+  -webkit-transition: padding-left @fast-transition;
+  &:hover {
+    padding-left: 3rem;
+    transition: padding-left @slow-transition;
+    -webkit-transition: padding-left @slow-transition;
+  }
+  a {
+    .unstyled-link;
+  }
+}
+
+.tagline {
+  // font-size: 1.2rem;
+  padding-left: @standard-padding-single;
+  transition: color @slow-transition;
+  -webkit-transition: color @slow-transition;
+  line-height: @logo-line-height;
+  &:hover {
+    -webkit-transition: color 300ms;
+    color: darken(@secondary-text, 20%);
+    transition: color @slow-transition;
+  }
+  padding-bottom: 0;
+}
+a.to_nav {
+  background: @mainbrand;
+  color: @secondary-text;
+  display: table-cell;
+  font-size: @logo-font-size;
+  margin-right: @standard-padding-single;
+  padding: @standard-padding;
+  vertical-align: middle;
+  .unstyled-link;
+  &:hover {
+    background: @brand-dark;
+    color: @secondary-text;
+    transition: color @slow-transition, background-color @slow-transition;
+    -webkit-transition: color @slow-transition, background-color @slow-transition;
+  }
+  &:focus {
+    background: @brand-dark;
+    color: @secondary-text;
+    transition: color @slow-transition, background-color @slow-transition;
+    -webkit-transition: color @slow-transition, background-color @slow-transition;
+  }
+}
+
+// Nav menu styles
+
+#primary_nav {
+  ul {
+    background: @secondary-bg;
+    list-style: none;
+    padding: @standard-padding;
+  }
+  li {
+    line-height: @logo-line-height;
+    margin-bottom: 0px;
+    a {
+      -webkit-transition: color @fast-transition;
+      border-bottom: 1px solid darken(@secondary-bg, 10%);
+      border: none;
+      color: @mainbrand;
+      display: block;
+      font-weight: bold;
+      padding: 0 0.5rem;
+      transition: color @fast-transition;
+      .upper-case;
+      .unstyled-link;
+      &:hover {
+        background-color: @mainbrand;
+        color: @secondary-text;
+        transition: color @slow-transition, background-color @slow-transition;
+        -webkit-transition: color @slow-transition, background-color @slow-transition;
+      }
+      &:focus {
+        background-color: @mainbrand;
+        color: @secondary-text;
+        transition: color @slow-transition, background-color @slow-transition;
+        -webkit-transition: color @slow-transition, background-color @slow-transition;
+      }
+    }
+    &:last-child {
+      a {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  a.to_nav {
+    display: none;
+  }
+  #primary_nav {
+    position: absolute;
+    right: @standard-padding-single;
+    top: 0px;
+    li {
+      display: inline;
+      float: right;
+      font-size: @menu-font-size;
+    }
+  }
+}
+
+// Featured image header styles
+.featured-img {
+  background-size: cover !important; // Using important because I need to override inline styling, not because I'm lazy
+  height: @feature-header-height;
+}
+
+.featured-overlay {
+  color: @secondary-text;
+  max-height: 100%;
+  overflow: hidden;
+  width: 100%;
+  .vertical-centre;
+}
+
+.article-header-description {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  border-color: @secondary-text;
+  border-right: solid 1px;
+  color: #dddddd;
+  font-family: @secondary-fonts;
+  font-size:0.9em;
+  padding: @standard-padding;
+  width: 60%;
+}
+
+// Separator styling
+
+.separator {
+  background-color: @secondary-bg;
+  height: @border-width;
+  margin-bottom: 10px;
+}
+
+// Style the article itself
+
+.article-text {
+  p {
+    &:first-of-type {
+      .bold;
+    }
+  }
+  img {
+    .border;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
+
+// Style image captions
+
+.captionjs {
+  figcaption {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    color: @secondary-text;
+    font-family: @secondary-fonts;
+    font-style: italic;
+    padding-bottom: 0.7rem;
+    padding-top: 0.7rem;
+    text-align: center;
+  }
+}
+
+// Style social links footer
+
+.social-links {
+  a {
+    color: @secondary-text;
+  }
+}
