@@ -61,7 +61,8 @@ blockquote {
   font-family: @secondary-fonts;
   font-style: italic;
   border-color: @secondary-bg;
-  border-right: @border-width solid;
+  border-left: @border-width solid;
+  padding-left: 1rem;
 }
 
 // Define a few standards
@@ -264,7 +265,7 @@ a.to_nav {
     margin-right: auto;
     max-width: 100%;
     a, a:hover, a:active, a:visited {
-      .border;
+      color: @secondary-bg;
     }
   }
 }
