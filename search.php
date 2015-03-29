@@ -5,7 +5,7 @@
 		<div class="featured-img" style="background-image: url(<?php echo article_custom_field('featured-image', 'http://s13.postimg.org/w3p4tc5pz/article_img_default.jpg'); ?>);">
 			<div class="featured-overlay">
 				<div class="container">
-					<h1 class="article-header-headline">Search results</h1>
+					<h1 class="article-header-headline">Search results for "<?php echo search_term(); ?>"</h1>
 				</div>
 			</div>
 		</div>
@@ -13,7 +13,7 @@
 		<div class="featured-img" style="background-image: url('https://ununsplash.imgix.net/photo-1423753623104-718aaace6772?dpr=2&fit=crop&fm=jpg&h=600&q=75&w=1050');">
 			<div class="featured-overlay">
 				<div class="container">
-					<h1 class="article-header-headline">Search results</h1>
+					<h1 class="article-header-headline">Search results for "<?php echo search_term(); ?>"</h1>
 				</div>
 			</div>
 		</div>
