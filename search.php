@@ -22,17 +22,14 @@
 <div class="container">
 
 	<?php if(has_search_results()): ?>
-		<ul class="items">
-			<?php $i = 0; while(search_results()): $i++; ?>
-				<li style="background: hsl(215,28%,<?php echo round((($i / posts_per_page()) * 20) + 20); ?>%);">
-					<article class="wrap">
-						<h2>
-							<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
-						</h2>
-					</article>
-				</li>
-			<?php endwhile; ?>
-		</ul>
+		<?php $i = 0; while(search_results()): $i++; ?>
+			<article class="wrap">
+				<h2>
+					<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
+				</h2>
+				<p><?php echo article_description(); ?></p>
+			</article>
+		<?php endwhile; ?>
 
 		<section class="pagination">
 			<?php if(has_pagination()) : ?>
