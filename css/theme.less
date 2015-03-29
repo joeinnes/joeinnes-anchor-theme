@@ -132,6 +132,7 @@ header .row {
     transition: color @slow-transition;
   }
   padding-bottom: 0;
+  display: none;
 }
 a.to_nav {
   background: @mainbrand;
@@ -202,6 +203,9 @@ a.to_nav {
 @media screen and (min-width: 768px) {
   a.to_nav {
     display: none;
+  }
+  .tagline {
+    display: inline;
   }
   #primary_nav {
     position: absolute;
