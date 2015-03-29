@@ -2,16 +2,21 @@
 <?php if(has_menu_items()) : ?>
 	<nav role="main" class="nav-menu" id="primary_nav">
 		<ul>
+			<li><form class="search-container" onsubmit="location.href='<?php echo base_url(); ?>' + 'search/' + document.getElementById('search-box').value; return false;">
+  <input id="search-box" type="text" class="search-box">
+  <label for="search-box"><span class="fa fa-search"></span></label>
+  <input type="submit" id="search-submit" />
+</form></li>
+			<?php while(categories()): ?>
+						<li class="category">
+							<a href="<?php echo category_url(); ?>" title="<?php echo category_title(); ?>">
+						<?php echo category_title(); ?>
+					</a>
+				</li>
+			<?php endwhile; ?>
 			<?php while(menu_items()) : ?>
 				<li><a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>"><?php echo menu_name(); ?></a></li>
 			<?php endwhile; ?>
-					<?php while(categories()): ?>
-								<li class="category">
-									<a href="<?php echo category_url(); ?>" title="<?php echo category_title(); ?>">
-								<?php echo category_title(); ?>
-							</a>
-						</li>
-					<?php endwhile; ?>
 		</ul>
 	</nav>
 <?php endif; ?>
@@ -43,6 +48,8 @@ $(window).load(function() {
 		'inherit_styles'  : true        // Have the caption.js container inherit box-model properties from the original image
 	});
 });
+
+document.addEventListener("touchstart", function(){}, true);
 </script>
 </div>
 </body>

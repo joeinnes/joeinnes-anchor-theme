@@ -226,3 +226,73 @@ a.to_nav:focus {
 .social-links a {
   color: #ffffff;
 }
+.search-box {
+  transition: width 300ms, border-radius 300ms, background 300ms, box-shadow 300ms;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ebebeb;
+}
+.search-box + label .search-icon {
+  color: #000000;
+}
+.search-box:hover {
+  color: white;
+  background: #c8c8c8;
+  box-shadow: 0 0 0 5px #3d4752;
+}
+.search-box:hover + label .search-icon {
+  color: #ffffff;
+}
+.search-box:focus {
+  transition: width 300ms cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 300ms, background 300ms;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding-left: 15px;
+  cursor: text;
+  width: 300px;
+  border-radius: auto;
+  background: #ebebeb;
+  color: black;
+}
+.search-box:focus + label .search-icon {
+  color: black;
+}
+.search-box:not(:focus) {
+  text-indent: -5000px;
+}
+#search-submit {
+  position: relative;
+  left: -5000px;
+}
+.search-icon {
+  position: relative;
+  left: -30px;
+  color: white;
+  cursor: pointer;
+}
+a.search {
+  /*  background: @mainbrand;
+  color: @secondary-text; */
+  font-size: 2.5rem;
+  margin-right: -2.5rem;
+  padding: 0rem 1.5rem 0rem 1.5rem;
+  vertical-align: middle;
+  color: #ffffff;
+  text-decoration: none;
+}
+a.search:hover {
+  background: #467e46;
+  color: #ffffff;
+  transition: color 300ms, background-color 300ms;
+  -webkit-transition: color 300ms, background-color 300ms;
+}
+a.search:focus {
+  background: #467e46;
+  color: #ffffff;
+  transition: color 300ms, background-color 300ms;
+  -webkit-transition: color 300ms, background-color 300ms;
+}
