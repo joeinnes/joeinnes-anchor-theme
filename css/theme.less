@@ -207,6 +207,12 @@ a.to_nav {
   .tagline {
     display: inline;
   }
+  .search-container {
+    display: block;
+  }
+  .alt-search-container {
+    display: none;
+  }
   #primary_nav {
     position: absolute;
     right: @standard-padding-single;
@@ -300,30 +306,32 @@ a.to_nav {
 
 // Search bar styles
 
+.search-container {
+  margin-right: -12rem;
+  display: none;
+}
 .search-box {
   transition: width @slow-transition, border-radius @slow-transition, background @slow-transition, box-shadow @slow-transition;
-  width: 40px;height: 40px;
+  width: 40px; height: 40px;
   border-radius: 20px;border: none;
   cursor: pointer;
-  background: rgb(235, 235, 235);
+  background: @main-bg;
   & + label .search-icon {    color: black    }
   &:hover {
     color: white;
-    background: rgb(200, 200, 200);
+    /*background: rgb(200, 200, 200);
     box-shadow: 0 0 0 5px rgb(61, 71, 82);
-    & + label .search-icon {    color: white    }
+    & + label .search-icon {    color: white    } */
   }
   &:focus {
-    transition: width @slow-transition cubic-bezier(0,1.22,.66,1.39), border-radius @slow-transition, background @slow-transition;
+    transition: width @slow-transition, border-radius @slow-transition, background @slow-transition;
     border: none;outline: none;
     box-shadow: none;
-    padding-left: 15px;
+    /* padding-left: 15px; */
     cursor: text;
     width: 300px;
     border-radius: auto;
-    background: rgb(235, 235, 235);
     color: black;
-    & + label .search-icon {    color: black;    }
   }
   &:not(:focus) {    text-indent:-5000px;    } // for more-graceful falling back (:not browsers likely support indent)
 }
@@ -334,30 +342,17 @@ a.to_nav {
 
 .search-icon {
   position: relative;
-  left: -30px;
-  color: white;
+  color: black;
   cursor: pointer;
+  right:20px;
+  font-size:1.5em;
 }
 
-
-a.search {
-/*  background: @mainbrand;
-  color: @secondary-text; */
-  font-size: @logo-font-size;
-  margin-right: -2.5rem;
+.alt-search-container {
   padding: @standard-padding;
-  vertical-align: middle;
-  .unstyled-link;
-  &:hover {
-    background: @brand-dark;
-    color: @secondary-text;
-    transition: color @slow-transition, background-color @slow-transition;
-    -webkit-transition: color @slow-transition, background-color @slow-transition;
-  }
-  &:focus {
-    background: @brand-dark;
-    color: @secondary-text;
-    transition: color @slow-transition, background-color @slow-transition;
-    -webkit-transition: color @slow-transition, background-color @slow-transition;
-  }
+  margin: @standard-padding;
+}
+
+input.alt-search-button {
+  color: @secondary-text;
 }

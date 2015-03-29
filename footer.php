@@ -2,11 +2,19 @@
 <?php if(has_menu_items()) : ?>
 	<nav role="main" class="nav-menu" id="primary_nav">
 		<ul>
-			<li><form class="search-container" onsubmit="location.href='<?php echo base_url(); ?>' + 'search/' + document.getElementById('search-box').value; return false;">
-  <input id="search-box" type="text" class="search-box">
-  <label for="search-box"><span class="fa fa-search"></span></label>
-  <input type="submit" id="search-submit" />
-</form></li>
+			<li class="search-container">
+					<form onsubmit="location.href='<?php echo base_url(); ?>' + 'search/' + document.getElementById('search-box').value; return false;">
+						<input id="search-box" type="text" class="search-box" /><span class="fa fa-search search-icon"></span>
+						<input type="submit" id="search-submit" />
+					</form>
+			</li>
+			<li class="alt-search">
+					<div class="alt-search-container">
+						<form onsubmit="location.href='<?php echo base_url(); ?>' + 'search/' + document.getElementById('search-box').value; return false;">
+							<input id="search-box" type="text" class="alt-search-box"/><input type="submit" class="alt-search-button" value="Search"/>
+						</form>
+					</div>
+			</li>
 			<?php while(categories()): ?>
 						<li class="category">
 							<a href="<?php echo category_url(); ?>" title="<?php echo category_title(); ?>">
