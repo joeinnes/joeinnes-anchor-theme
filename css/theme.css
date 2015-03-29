@@ -280,9 +280,10 @@ a.to_nav:focus {
   font-size: 1.5em;
 }
 .alt-search-container {
-  padding: 0rem 1.5rem 0rem 1.5rem;
-  margin: 0rem 1.5rem 0rem 1.5rem;
+  margin-bottom: -4rem;
 }
 input.alt-search-button {
   color: #ffffff;
+  margin-left: 1rem;
+  padding-bottom: 0;
 }
