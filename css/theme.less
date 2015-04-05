@@ -5,12 +5,11 @@
 // Define variables
 @main-text: #454545;
 @main-bg: #ffffff;
-@secondary-text: @main-bg; // Appears 12 times
-@secondary-bg: @main-text; // Appears 7 times
-@mainbrand: #66aa66; // Appears 6 times
-@brand-dark: darken(@mainbrand, 15%); // Appears 2 times
+@secondary-text: @main-bg;
+@secondary-bg: @main-text;
+@mainbrand: #66aa66;
+@brand-dark: darken(@mainbrand, 15%);
 @primary-fonts: 'Source Sans Pro', sans-serif;
-// @primary-fonts: sans-serif;
 @secondary-fonts: Georgia, serif;
 @feature-header-height: 40vh;
 @logo-font-size: 2.5rem;
@@ -164,37 +163,37 @@ a.to_nav {
     background: @secondary-bg;
     list-style: none;
     padding: @standard-padding;
-  }
-  li {
-    line-height: @logo-line-height;
-    margin-bottom: 0px;
-    a {
-      -webkit-transition: color @fast-transition;
-      border-bottom: 1px solid darken(@secondary-bg, 10%);
-      border: none;
-      color: @mainbrand;
-      display: block;
-      font-weight: bold;
-      padding: 0 0.5rem;
-      transition: color @fast-transition;
-      .upper-case;
-      .unstyled-link;
-      &:hover {
-        background-color: @mainbrand;
-        color: @secondary-text;
-        transition: color @slow-transition, background-color @slow-transition;
-        -webkit-transition: color @slow-transition, background-color @slow-transition;
-      }
-      &:focus {
-        background-color: @mainbrand;
-        color: @secondary-text;
-        transition: color @slow-transition, background-color @slow-transition;
-        -webkit-transition: color @slow-transition, background-color @slow-transition;
-      }
-    }
-    &:last-child {
+    li {
+      line-height: @logo-line-height;
+      margin-bottom: 0px;
       a {
-        border-bottom: none;
+        -webkit-transition: color @fast-transition;
+        border-bottom: 1px solid darken(@secondary-bg, 10%);
+        border: none;
+        color: @mainbrand;
+        display: block;
+        font-weight: bold;
+        padding: 0 0.5rem;
+        transition: color @fast-transition;
+        text-decoration: none;
+        .upper-case;
+        &:hover {
+          background-color: @mainbrand;
+          color: @secondary-text;
+          transition: color @slow-transition, background-color @slow-transition;
+          -webkit-transition: color @slow-transition, background-color @slow-transition;
+        }
+        &:focus {
+          background-color: @mainbrand;
+          color: @secondary-text;
+          transition: color @slow-transition, background-color @slow-transition;
+          -webkit-transition: color @slow-transition, background-color @slow-transition;
+        }
+      }
+      &:last-child {
+        a {
+          border-bottom: none;
+        }
       }
     }
   }
@@ -312,11 +311,12 @@ a.to_nav {
 }
 .search-box {
   transition: width @slow-transition, border-radius @slow-transition, background @slow-transition, box-shadow @slow-transition;
-  width: 40px; height: 40px;
-  border-radius: 20px;border: none;
+  width: 3rem;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
   cursor: pointer;
   background: @main-bg;
-  & + label .search-icon {    color: black    }
   &:hover {
     color: white;
     /*background: rgb(200, 200, 200);
